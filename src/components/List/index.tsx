@@ -1,7 +1,19 @@
-import Products from '../Products'
+import { useState } from 'react';
 import styles from './list.module.scss'
 
 export default function List(){
+
+    function handleCreateNewProduct(){
+        return(
+            <div className={styles.inputs}>
+                <input type="text" className={styles.inpProducts}/>
+                <input type="number" className={styles.inpQuntity}/>
+                <input type="number" className={styles.inpValue}/>
+            </div>
+        )
+    }
+    const newProductInputs = handleCreateNewProduct();
+    
     return(
         <>
             <header className={styles.title}>
@@ -10,10 +22,10 @@ export default function List(){
                 <strong>Valor</strong>
             </header>
             <main className={styles.main}>
-                <Products />
+                {newProductInputs}
             </main>
             <footer className={styles.footer}>
-                <button >
+                <button onClick={handleCreateNewProduct}>
                     Adicionar novo item
                 </button>
             </footer>
