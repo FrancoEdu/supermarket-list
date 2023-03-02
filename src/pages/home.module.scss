@@ -1,0 +1,39 @@
+.toBuyList{
+    width: 25.5rem;
+    height: 46rem;
+    margin: 1rem;
+    border-radius: 10px;
+    background: var(--white);
+}
+
+.headerOfList{
+    padding: 1rem;
+    color: black;
+    text-align: center;
+    span{
+        color: var(--cyan-500);
+    }
+}
+.mainOfList{
+    height: 34.5rem;
+}
+
+.footerOfList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--gray-300);
+    border-radius: 10px;
+    align-items: center;
+
+    p{
+        font-size: 2rem;
+        font-family: 'Roboto', sans-serif;
+    }
+    strong{
+        font-size: 2rem;
+        font-family: 'Roboto', sans-serif;
+    }
+}
