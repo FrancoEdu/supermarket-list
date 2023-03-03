@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from './home.module.scss'
-import carrinhoImg from '../pages/images/carrinho.png'
 import List from "@/components/List";
 
 export default function Home() {
@@ -16,15 +15,6 @@ export default function Home() {
         <main className={styles.mainOfList}>
           <List />
         </main>
-        <footer className={styles.footerOfList}>
-          <p>Total: </p>
-          <strong>
-            {new Intl.NumberFormat('pt-BR',{
-              style: 'currency',
-              currency: 'BRL'
-            }).format(0)}
-          </strong>
-        </footer>
       </div>
     </>
   )

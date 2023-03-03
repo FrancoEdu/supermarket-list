@@ -1,7 +1,7 @@
 .title{
     display: flex;
     flex-direction: row;
-    gap: 5rem;
+    gap: 5.5rem;
     margin: 1rem;
 }
 .main{
@@ -15,6 +15,7 @@
 }
 .footer{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 1rem;
@@ -27,19 +28,33 @@
         color: black;
         font-weight: 900;
         font-size: 1.2rem;
+        transition: 1s;
+
+        &:hover{
+            filter: brightness(0.8);
+        }
     }
 }
 
-.inpProducts{
-    width: 8.3rem;
-}
+.totalFooter{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--gray-300);
+    border-radius: 10px;
+    align-items: center;
 
-.inpQuntity{
-    width: 10rem;
-}
-
-.inpValue{
-    width: 3.9rem;
+    p{
+        font-size: 2rem;
+        font-family: 'Roboto', sans-serif;
+    }
+    strong{
+        font-size: 2rem;
+        font-family: 'Roboto', sans-serif;
+    }
 }
 
 .inputs{
@@ -49,6 +64,7 @@
 
     input{
         height: 2rem;
+        width: 100%;
         font-weight: 400;
         padding: 0.5rem;
         background-color: var(--gray-100);
