@@ -25,13 +25,14 @@ export default function List(){
                 <strong>Valor</strong>
             </header>
             <main className={styles.main}>
+                
+            </main>
+            <footer className={styles.footer}>
                 <div className={styles.inputs}>
                     <input type="text" placeholder='Ex: Banana' value={name} onChange={event => setName(event.target.value)}/>
                     <input type="number" placeholder='Ex: 7' value={quantity} onChange={event => setQuantity(Number(event.target.value))}/>
                     <input type="number" placeholder='Ex: 5' value={price} onChange={event => setPrice(Number(event.target.value))}/>
                 </div>
-            </main>
-            <footer className={styles.footer}>
                 <button onClick={handleCreteProduct}>
                     Adicionar novo item
                 </button>
