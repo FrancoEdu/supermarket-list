@@ -9,13 +9,13 @@ interface Products{
 }
 
 export default function List() {
-    const [name, setName] = useState('');
-    const [quantity, setQuantity] = useState(0);
-    const [price, setPrice] = useState('');
-    const [products, setProducts] = useState<Products[]>([]);
+    const [name, setName] = useState(''); // State hook to store the name of a product
+    const [quantity, setQuantity] = useState(0); // State hook to store the quantity of a product
+    const [price, setPrice] = useState(''); // State hook to store the price of a product
+    const [products, setProducts] = useState<Products[]>([]); // State hook to store an array of products
   
-    useEffect(() => {
-      const storedProducts = localStorage.getItem('products');
+    useEffect(() => { // Effect hook to load products from localStorage when the component mountstem('products');
+      const storedProducts = localStorage.getI 
       if (storedProducts) {
         setProducts(JSON.parse(storedProducts));
       }
@@ -26,7 +26,7 @@ export default function List() {
         id: Math.random(),
         name: name,
         quantity: quantity,
-        price: Number(price.replace(',', '.')), // substitui a vírgula por ponto para garantir que o número seja interpretado corretamente
+        price: Number(price.replace(',', '.')), //replaces the comma with a period to ensure the number is interpreted correctly
       };
   
       const newProducts = [...products, newProduct];
@@ -40,8 +40,8 @@ export default function List() {
   
 
     function handlePriceChange(event: React.ChangeEvent<HTMLInputElement>) {
-        const newValue = event.target.value.replace(',', '.'); // substitui a vírgula por ponto para garantir que o número seja interpretado corretamente
-        const validValue = /^[0-9]*\.?[0-9]*$/.test(newValue) ? newValue : price; // valida se o novo valor é um número válido e, se não for, mantém o valor anterior
+        const newValue = event.target.value.replace(',', '.'); // replaces the comma with a period to ensure the number is interpreted correctly
+        const validValue = /^[0-9]*\.?[0-9]*$/.test(newValue) ? newValue : price; //validates that the new value is a valid number, and if not, keeps the previous value
         setPrice(validValue);
       }
 
