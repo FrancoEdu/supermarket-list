@@ -7,6 +7,7 @@ export default function Home() {
     <>
       <Head>
         <link rel="shortcut icon" href="favicon.png" type="image/png" />
+        <meta name="viewport" content="width=device-width, user-scalable=no"/>
         <title>Supermarket List</title>
       </Head>
       <div className={styles.toBuyList}>
